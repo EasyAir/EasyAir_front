@@ -1,0 +1,217 @@
+  
+::-webkit-scrollbar { width: 5px; }
+/* 스크롤바의 width */
+::-webkit-scrollbar-track { background-color: #f0f0f0; }
+/* 스크롤바의 전체 배경색 */
+::-webkit-scrollbar-thumb { 
+  background-color: #50C9BB;
+}
+/* 스크롤바 색 */
+::-webkit-scrollbar-button { display: none; }
+i{
+  font-style: normal;
+}
+a{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 > i{
+  color: #50C9BB;
+}
+header{
+  padding:0px 45px;
+  color: rgb(104, 104, 104);
+  display: flex;
+  justify-content: space-between;
+/*   border-bottom: 1px solid rgb(167, 167, 167,0.5); */
+    box-shadow: 0px 0px 5px rgb(177, 177, 177,0.5); 
+    width: 96vw;
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+header > .logo > i{
+  color: #50C9BB;
+  font-size: 2.5rem;
+  padding: 0 10px;
+}
+.menu{
+  display: flex;
+  align-items: center;
+  width: 55%;
+  justify-content: space-between;
+}
+.p
+.p > a{
+  color: rgb(148, 148, 148);
+  padding: 5px 10px;
+}
+.p > a{
+  padding: 10px 10px;
+  cursor: pointer;
+/*   font-weight: bold; */
+}
+.p > a:hover{
+  border-bottom: 2px solid #50C9BB;
+}
+.p > a > i{
+  color: #50C9BB;
+  font-style: normal;
+}
+.p > i{
+  font-size: 15px;
+  color: #50C9BB;
+  padding: 0 5px;
+}
+.user{
+  width: 150px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.user > button{
+  width: 100px;
+  height: 30px;
+  border: 2px solid #50C9BB;
+  background-color: transparent;
+  color: #50C9BB;
+  font-weight: bold;
+  outline: none;
+  border-radius: 5px;
+}
+.user > i{
+  color: #50C9BB;
+  font-size: 2rem;
+}
+.user > button:hover{
+  background-color: #5ec9bc;
+  color: white;
+}
+.scheduleModal{
+  width: 200px;
+  height: 200px;
+  margin-left: 100px;
+  transform: translateY(-11vh);
+  display: flex;
+  justify-content: center;
+/*   align-items: center; */
+/*   box-shadow: 0px 0px 7px rgb(221, 221, 221,0.8);
+  border-radius: 10px;
+  border: 1px solid #50C9BB; */
+  flex-direction: column;
+}
+.scheduleModal > a{
+  padding-top: 30px;
+  padding-bottom: 5px;
+  color: #50C9BB;
+  font-weight: bold;
+}
+.scheduleModal > i{
+  font-size: 13px;
+}
+.scheduleModal > select{
+  width: 150px;
+  outline: none;
+}
+
+.companyBody{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.companyManagementBox{
+  width: 1100px;
+  height: 400px;
+  overflow-y: scroll;
+  margin-bottom: 100px;
+}
+.management{
+  width: 100%;
+  padding: 5px 0;
+  padding: 12px 0px;
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  opacity: 0.8;
+  border-bottom: 1px solid gainsboro;
+  justify-content: space-between;
+}
+.companyProfile{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: thistle;
+  margin-right: 10px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.management > div{
+  display: flex;
+  align-items: center;
+}
+.management > div:nth-of-type(1) > a{
+  color: rgb(59, 59, 59);
+  font-weight: bold;
+  color: #50C9BB;
+}
+.issueCircle{
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #50C9BB;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 0px 0px 4px rgb(194, 194, 194,0.8);
+}
+.issueCircle:nth-of-type(1){
+  background-color: rgb(16, 192, 0);
+}
+.issueCircle:nth-of-type(2){
+  background-color: rgb(255, 194, 38);
+}
+.issueCircle:nth-of-type(3){
+  background-color: rgb(255, 55, 29);
+}
+.management > button{
+  width: 90px;
+  height: 35px;
+  background-color: #50C9BB;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  color: white;
+  outline: none;
+  margin-right: 40px;
+  box-shadow: 0px 0px 5px #469c92;
+}
+.management > div:nth-of-type(1){
+  width: 230px;
+  margin-left: 20px;
+}
+.management:hover{
+  background-color: rgb(228, 228, 228,0.5);
+  cursor: pointer;
+}
+.companyBody > a{
+  margin-bottom: 40px;
+  transform: translateX(-21vw);
+  font-size:1.5rem;
+  color: rgb(172, 172, 172);
+}
+.companyBody > a > i{
+  color: #50C9BB;
+}
+div > a > i{
+  color: rgb(73, 73, 73);
+}

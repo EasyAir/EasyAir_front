@@ -1,0 +1,44 @@
+.Container{
+    width:310px;
+height:420px;
+padding: 15px 20px;
+border: 1px solid gray;
+/* background-color:whitesmoke; */
+/* background-color:#50C9BB; */
+border-radius:7px;
+overflow:hidden;
+/* background-image:url(./컴포넌트배경.png);
+box-shadow: 0px 0px 3px rgba(156, 255, 255, 0.9); */
+}
+.CompanyIntro{
+    width: 1200px;
+}
+.CompanyIntro > h2{
+    color:#50C9BB;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.CompanyIntro a:nth-of-type(2){
+    color: tomato;
+}
+.managementCont{
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.companyName{
+    width: 50px;
+    padding: 1px 0;
+    border-radius: 24px;
+    border: 1px solid #50C9BB;
+    color: #50C9BB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.cont:hover{
+    transition: 1s;
+    box-shadow: 0px 0px 8px #50C9BB;
+}

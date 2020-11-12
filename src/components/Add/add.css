@@ -1,0 +1,38 @@
+.addBody{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addWriting{
+    width: 800px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 7px rgb(194, 194, 194,0.8);
+}
+.addWarning{
+    width: 200px;
+    height: 300px;
+    border: 1px solid ;
+    margin-left: 50px;
+}
+.SubButton{
+    width: 30%;
+    height: 40px;
+    background-color: transparent;
+/*     border: 1px solid #50C9BB; */
+border: 1px solid white;
+outline: none;
+    margin-top: 30px;
+    color: #50C9BB;
+}
+.underButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.SubButton:hover{
+    transition: 1s;
+    border: 1px solid #50C9BB;
+}

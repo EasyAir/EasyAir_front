@@ -1,0 +1,227 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    -ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;
+}
+.no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+.page1{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./배경.png);
+    background-repeat: no-repeat;
+    display: flex;
+}
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.introduce{
+    width: 34%;
+    height: 35%;
+    background-color: transparent;
+    transform: translate(10%,40%);
+}
+.introduce > p:first-child > a{
+    color: white;
+    font-size: 2.5rem;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.introduce > p >i{
+    font-size: 3rem;
+    color: rgb(77, 255, 172);
+}
+.introduce > p > a > i{
+    color: rgb(77, 255, 172);
+}
+.introduce > p{
+    padding-top: 20px;
+    color: white;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.introduce > p:nth-of-type(2) > a{
+    color: rgb(77, 255, 172);
+}
+.introduce > button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(77, 255, 172);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+/*     box-shadow: 0px 0px 10px rgb(77, 255, 172,0.8); */
+    outline: none;
+    float: right;
+}
+.introduce > button:hover{
+    box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.7);
+}
+.loginBox{
+    width: 500px;
+    height: 550px;
+/*     box-shadow: 0px 0px 2px rgba(187, 187, 187, 0.8); */
+    transform: translate(120%,30%); 
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.loginInput{
+    width: 300px;
+    padding: 10px 15px;
+    border-bottom: 4px solid rgb(77, 255, 172);
+    display: flex;
+    margin-top: 3%;
+}
+.loginInput > i{
+    color: rgb(77, 255, 172);
+}
+.loginInput > input{
+    width: 250px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: rgb(49, 145, 100);
+}
+.loginInput > input::placeholder{
+    color: rgb(148, 148, 148);
+}
+.loginBox > p:nth-of-type(1){
+    font-size: 1.5rem;
+    color: rgb(173, 173, 173);
+     padding-right: 22%; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.loginInput:nth-of-type(1){
+    margin-top: 5%;
+}
+.loginBox > p > i{
+    color: rgb(77, 255, 172);
+    font-weight: bold;
+}
+.loginButton > button{
+    border: 1px solid rgb(77, 255, 172);
+    background-color: rgb(77, 255, 172);
+    color: rgb(255, 255, 255);
+    width: 120px;
+    height: 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-left: 20px;
+    outline: none;
+}
+.button2{
+    border: 1px solid rgb(77, 255, 172);
+    background-color: rgb(77, 255, 172);
+    color: rgb(255, 255, 255);
+    width: 120px;
+    height: 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-left: 20px;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid rgb(77, 255, 172);
+    color: rgb(77, 255, 172);
+}
+.loginButton > button:hover{
+    box-shadow: 0px 0px 5px rgba(185, 185, 185, 0.7);
+}
+.button2:hover{
+    box-shadow: 0px 0px 5px rgba(185, 185, 185, 0.7);
+}
+.loginButton{
+    display: flex;
+    margin-top: 12%;
+}
+.bodyCover{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0,0.5);
+    position: absolute;
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.signupBox{
+    width: 400px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signupBox > a{
+    font-size: 1.4rem;
+    color: rgb(184, 184, 184)
+}
+.signupBox > a >i{
+    color: rgb(77, 255, 172);
+    font-weight: bold;
+}
+.signupBox > button{
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: rgb(255, 253, 112);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+.signupBox > button:nth-of-type(2){
+    background-color: blue;
+}
+.signupBox > button:nth-of-type(2) > a{
+    color: white;
+    font-weight: 500;
+}
+.signupBox > button:nth-of-type(3){
+    background-color: rgb(243, 243, 243);
+}
+.signupBox > button:nth-of-type(3) > a{
+    color: rgb(26, 26, 26);
+    font-weight: bold;
+}
+button > img{
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+}
+button > a{
+    color: rgb(100, 57, 57);
+    font-size: 0.9rem;
+    font-weight:bold;
+}
+hr{
+    border: 1px solid rgb(201, 201, 201);
+    width: 160px;
+    margin-top: 20px;
+}
+.signupBox > i{
+    position: absolute;
+    margin-bottom: 22%;
+    font-size: 1.5rem;
+    margin-left: 17%;
+    color: rgb(189, 189, 189);
+    opacity: 0.5;
+}
+.signupBox > i:hover{
+    opacity: 1;
+}
