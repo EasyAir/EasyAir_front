@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import * as S from './addStyle';
 import './add.css';
 
-/* class Input extends Component {
+class InputIformation extends Component{
     render(){
-        return(
-            <p>
-            {this.props.title} <br />
-            <input
-                placeholder={this.props.inputVal}
-            />
-        </p>
+        const {titleName,placeholder,widthVal} = this.props;
+         return(
+            <div>
+            <a> {titleName} <i>*</i></a> 
+        <input type="text"
+        placeholder={placeholder}
+        />
+            </div>
         )
     }
 }
@@ -20,28 +21,20 @@ class Add extends Component{
     render(){
         return(
             <S.addBody>
-                <S.addWriting>
-                    <form action="">
-                        <Input title="Company" inputVal="회사명을 입력하세요."></Input>
-                        <Input title="Name" inputVal="이름을 입력하세요."></Input>
-                        <Input title="PhoneNum" inputVal="전화번호를 입력하세요."></Input>
-                        <Input title="Location" inputVal="주소를 입력하세요."></Input>
-                        <div className="underButton">
-                        <button type="submit" className="SubButton">
-                            회사 등록하기
-                        </button>
-                        </div>
-                    </form>
-                </S.addWriting>
+                <div>
+                    <h2>New Company</h2>
+                    <h4>- 새로운 회사 레포지토리를 생성합니다 -</h4>
+                    <h4>( Create a new company repository )</h4>
+                </div>
+                <S.inputCont>
+                    <InputIformation titleName="Name" placeholder="이름을 입력하세요"></InputIformation> 
+                    <InputIformation titleName="Company" placeholder="회사명을 입력하세요" ></InputIformation> 
+                </S.inputCont>
+                <div className="createWarning">위 정보를 정확히 기입해 주세요. 수정할 수 없습니다.</div>
+                <S.inputCont>
+                    <InputIformation className="description"></InputIformation>
+                </S.inputCont>
             </S.addBody>
-        )
-    }
-} */
-
-class Add extends Component{
-    render(){
-        return(
-            <div></div>
         )
     }
 }
