@@ -1,8 +1,35 @@
 import React, {Component} from 'react';
 import { BrowserRouter,Route,Switch,Link } from 'react-router-dom';  
 import './intro.css'
+import Kakao from 'react-kakao-login';
 
-class Intro extends Component {
+
+class Intro extends Component{
+    state={
+        isLogin: false
+    }
+    loginWithKakao = () => {
+        try {
+          return new Promise((resolve, reject) => {
+            if (!Kakao) {
+              reject('Kakao 인스턴스가 존재하지 않습니다.')
+            }
+            window.Kakao.Auth.login({
+              success: (auth) => {
+                console.log('정상적으로 로그인 되었습니다.', auth)
+                this.setState({
+                  isLogin: true
+                })
+              },
+              fail: (err) => {
+                console.error(err)
+              }
+            })
+          })
+        } catch (err) {
+          console.error(err)
+        }
+      }
     render() {
         return (
             <body>
@@ -26,10 +53,9 @@ class Intro extends Component {
                         </div>
                         <div class="loginButton">
                             <button>LOGIN</button>
-                           <Link to="/heaer"><button id="signup" className="button2">SIGNUP</button></Link>
+                           <button id="signup" className="button2">SIGNUP</button>
+                           <button onClick={this.loginWithKakao}></button>
                         </div>
-                        <a id="kakao-login-btn" style={{ marginTop: "30px" }}></a>
-                        <a href="http://developers.kakao.com/logout"></a>
                     </div>
                 </div>
                 <script src="./kakao.js"></script>
