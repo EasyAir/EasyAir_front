@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import { BrowserRouter,Route,Switch,Link } from 'react-router-dom';  
 import './intro.css'
 import Kakao from 'react-kakao-login';
+import img from './kakao.png'
+import axios from 'axios';
 
-
+let locate;
 class Intro extends Component{
     state={
         isLogin: false
@@ -17,9 +19,21 @@ class Intro extends Component{
             window.Kakao.Auth.login({
               success: (auth) => {
                 console.log('정상적으로 로그인 되었습니다.', auth)
+                console.log(JSON.stringify(auth))
                 this.setState({
                   isLogin: true
                 })
+                window.Kakao.API.request({
+                    url: '/v2/user/me',
+                    success: function(response) {
+                        console.log(response);
+                        console.log(response.kakao_account.email)
+                        console.log(response.properties.nickname)
+                    },
+                    fail: function(error) {
+                        console.log(error);
+                    }
+                });
               },
               fail: (err) => {
                 console.error(err)
@@ -53,8 +67,8 @@ class Intro extends Component{
                         </div>
                         <div class="loginButton">
                             <button>LOGIN</button>
-                           <button id="signup" className="button2">SIGNUP</button>
-                           <button onClick={this.loginWithKakao}></button>
+{/*                            <button id="signup" className="button2">SIGNUP</button> */}
+                          <Link to="/company"><button onClick={this.loginWithKakao} className="kakaobutton"><img src={img}/> Kakao</button></Link>
                         </div>
                     </div>
                 </div>

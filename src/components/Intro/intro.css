@@ -119,6 +119,28 @@ a{
     margin-left: 20px;
     outline: none;
 }
+.kakaobutton{
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-left: 20px;
+    outline: none;
+    width: 120px;
+    height: 30px;
+    background-color: yellow;
+    color: rgb(49, 36, 36);
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kakaobutton:hover{
+    box-shadow: 0px 0px 5px rgba(185, 185, 185, 0.7);
+}
+.kakaobutton > img{
+    width: 15px;
+    height: 15px;
+}
 .button2{
     border: 1px solid rgb(77, 255, 172);
     background-color: rgb(77, 255, 172);
