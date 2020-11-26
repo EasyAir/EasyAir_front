@@ -12,16 +12,16 @@ class Add extends Component{
         location: ''
     }
     subValue=(e)=>{
-        e.preventDefault();
+        e.preventDefault()
         this.setState({
             [e.target.name] : e.target.value
         })
     }
     submit=(e)=>{
-/*         e.preventDefault(); */
+        e.preventDefault(); 
         axios({
             method: 'post',
-            url: 'https://www.easyair.herokuapp.com/server/company',
+            url: 'http://easyair.herokuapp.com/server/company',
              headers: {
                 Authorization: "3CRVq4DzBsm6RfIFYPzYxfbiFatujITujGjwbgo9dVwAAAF16TQzeQ"
             }, 
@@ -29,8 +29,11 @@ class Add extends Component{
                 name : this.state.companyName,
                 email: this.state.email,
                 phone: this.state.phoneNum,
-                location: this.state.location
+                location: this.state.location,
+                region: '조호원병진,'
             }
+        }).catch(function(error){
+            console.log(error);
         })
         console.log(this.state)
     }
@@ -38,21 +41,21 @@ class Add extends Component{
         return(
             <S.addBody>
                 <div>
-                    <h2>New Company</h2>
-                    <h4>- 새로운 회사 레포지토리를 생성합니다 -</h4>
-                    <h4>( Create a new company repository )</h4>
+                    <h2>Add Factory</h2>
+                    <h4>- 새로운 공장을 등록합니다 -</h4>
+                    <h4>( This page add a new factory )</h4>
                 </div>
                 <form onSubmit={this.subValue,this.submit} method="get">
                     <S.inputCont>
                        {/*  <InputIformation titleName="Company Name" placeholder="회사명을 입력하세요" name="companyName"></InputIformation>  */}
-                        <div><a> Company Name <i>*</i></a><input type="text" name="companyName" onChange={this.subValue} placeholder="회사명을 입력하세요"/></div>
-                        <div><a> Phone Num <i>*</i></a><input type="text" name="phoneNum" onChange={this.subValue} placeholder="전화번호를 입력하세요"/></div>
+                        <div><a> Company Name <i>*</i></a><input type="text" name="companyName" onChange={this.subValue} placeholder="공장명을 입력하세요"/></div>
+                        <div><a> Chairman <i>*</i></a><input type="text" name="phoneNum" onChange={this.subValue} placeholder="대표명을 입력하세요"/></div>
                     </S.inputCont>
                     <S.inputCont>
-                        <div><a> E-mail <i>*</i></a><input type="text" name="email" onChange={this.subValue} placeholder="이메일을 입력하세요" style={{width:'560px'}}/></div>
+                        <div><a> Location <i>*</i></a><input type="text" name="email" onChange={this.subValue} placeholder="주소를 입력하세요" style={{width:'560px'}}/></div>
                     </S.inputCont>
                     <S.inputCont>
-                        <div><a> Location <i>*</i></a><input type="text" name="location" onChange={this.subValue} placeholder="주소를 입력하세요"style={{width:'400px'}}/></div>
+                        <div><a> Phone Num <i>*</i></a><input type="text" name="location" onChange={this.subValue} placeholder="전화번호를 입력하세요"style={{width:'400px'}}/></div>
                     </S.inputCont>
                     <button type="submit">SUBMIT</button>
                 </form>
