@@ -8,6 +8,12 @@ justify-content:center;
 align-items:center;
 flex-direction:column;
 position:absolute;
+article{
+    width:540px;
+    border:none;
+    box-shadow:none;
+    height: 70px;
+}
 input{
     width:500px;
     height:50px;
