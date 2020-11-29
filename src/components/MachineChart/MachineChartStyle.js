@@ -8,93 +8,85 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 `
-
-const MachineChart = styled.div`
-width:900px;
-height:570px;
-overflow-y:scroll;
-::-webkit-scrollbar{
-    display:block;
-}
-table{
-    width:100%;
-    thead{
-        overflow:auto;
-        width:900px;  
-    }
-    th{
-        background-color:#50C9BB;
-            border:none;
-            padding:20px 0;
-            color:white;
-            font-size:15px;
-            font-weight:bold;
-            overflow:hidden;
-            border-radius:5px 5px 0px 0px; 
-            position:sticky;
-            top:0;
-    }
-    tr{
-            width:25%;     
-    }
-    tbody{
-        tr{
-        background-color:rgb(230, 230, 230);
-        color:gray;
-        :hover{
-            background-color:rgb(214, 219, 218);
-        }
-        :nth-of-type(2n){
-            background-color:whitesmoke;
-            :hover{
-            background-color:rgb(214, 219, 218);
-        }
-        }
-        td{
-            padding:25px 10px;
-            text-align:center;
-        }
-    }
-    }
-}
-`
-const Header = styled.header`
-width:900px;
-padding:15px 0;
+const TableHeader = styled.div`
+width:1000px;
+border-bottom:2px solid #50C9BB;
 display:flex;
-justify-content:flex-start;
-box-shadow:none;
-font-size:1.1rem;
-color:#50C9BB;
-font-weight:bold;
+justify-content:space-between;
+padding:15px 20px;
+a{
+    font-weight:bold;
+    color:#50C9BB;
+}
 `
-const Thead = styled.div`
-width:900px;
-table{
-    width:100%;
-    thead{
-        background-color:#50C9BB;
-        overflow:hidden;
-        width:900px;  
+const TableBody = styled.div`
+width:1040px;
+overflow:scroll;
+height:600px;
+display:flex;
+flex-direction:column;
+`
+const Tr = styled.div`
+width:90%;
+height:40px;
+/* border:1px solid rgb(184, 184, 184); */
+box-shadow: 0px 0px 3px #50C9BB;
+border-radius:10px;
+margin-top:30px;
+padding: 20px 30px;
+display:flex;
+margin-left:10px;
+margin-bottom:10px;
+div{
+    display:flex;
+    flex-direction:column;
+    padding:0px 30px;
+    justify-content:center;
+    a{
+        font-size:1rem;
+        font-weight:bold;
+        color:#50C9BB;
+        :last-child{
+            font-size:0.7rem;
+            color:gray;
+        }
     }
-    th{
-            border:none;
-            padding:20px 0;
-            color:white;
-            font-size:15px;
-            font-weight:bold;
-            overflow:hidden;
-            border-radius:5px 5px 0px 0px; 
+}
+i{
+    color:gray;
+    font-size:2.3rem;
+}
+section{
+    width:200px;
+    display:flex;
+    align-items:center;
+    padding:0px 70px;
+    a{
+        color:gray;    
+        i{
+            font-size:18px;
+            padding:0px 5px;
+        }
     }
-    tr{
-            width:25%;     
+}
+footer{
+    width:100px;
+    padding:0px 60px;
+    display:flex;
+    align-items:center;
+    a{
+        i{
+            font-size:18px;
+            padding:0px 5px;
+        }
+        color:black;
     }
 }
 `
 
 export{
 Background,
-MachineChart
-,Header
-,Thead
+TableHeader,
+TableBody,
+Tr
 }

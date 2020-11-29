@@ -1,56 +1,47 @@
 import React, {useState, Fragment, Component} from 'react';
 import * as M from './MachineChartStyle'
 
-class Table extends Component{
-    render() {
-        return (
-            <tr>
-                <td>{this.props.factory}</td>
-                <td>{this.props.serial}</td>
-                <td>{this.props.machine}</td>
-                <td>{this.props.made}</td>
-            </tr>
-        )
-    }
+const Chart =()=>{
+    return(
+        <M.Tr>
+        <i class="fas fa-users-cog"></i>
+        <div>
+            <a href="">A1234543245</a>
+            <a href="">시리얼넘버 : 1SDF213123K</a>
+        </div>
+        <section>
+            <a href=""><i class="fas fa-globe-americas"></i>china</a>
+        </section>
+        <footer>
+            <a href=""><i class="fas fa-user-shield"></i>정지원 </a>
+        </footer>
+        </M.Tr>
+    )
 }
 
-const Machine=()=>{
+const Machine =()=>{
     return(
         <M.Background>
-            <M.Header>- 신진공장 기계 목록 -</M.Header>
-            <M.MachineChart>
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>시리얼 넘버</th>
-                            <th>모델명</th>
-                            <th>제조공장</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
+            <M.TableHeader>
+                <a href="">기기정보</a>
+                <a href="">제조국</a>
+                <a href="">담당자</a>
+                <a href=""> </a>
+            </M.TableHeader>
+            <M.TableBody>
+                <Chart></Chart>
+                <Chart></Chart>
+                <Chart></Chart>
+                <Chart></Chart>
+                <Chart></Chart>
+                <Chart></Chart>
+                <Chart></Chart>
+                <Chart></Chart>
+                <Chart></Chart>
+                <Chart></Chart><Chart></Chart>
 
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-                        <Table factory="신진공장" serial="102313123" machine="A1213" made="china"></Table>
-
-                    </tbody>
-                </table>
-            </M.MachineChart>
+                <Chart></Chart>
+            </M.TableBody>
         </M.Background>
     )
 }
