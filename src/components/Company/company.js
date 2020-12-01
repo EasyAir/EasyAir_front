@@ -1,13 +1,14 @@
-import React, {useState, Fragment, Component} from 'react';
+import React, {useState, Fragment, Component, useEffect, tate} from 'react';
 import { Link } from 'react-router-dom';
 import * as C from './companyStyle';
 import img from './download.jpg';
 import nullImg from './카메라4.jpg';
 import './company.css'
+import axios from 'axios';
 
 
-class CompanyManagement extends Component{
-    render(){
+class CompanyManagement extends Component {
+    render() {
         const { companyName, phoneNum, content, represent } = this.props; // props 코드길이 줄이기
         return(
             <div style={{display:'flex'}} className="managementCont">
@@ -33,13 +34,32 @@ CompanyManagement.defaultProps = {
     represent: 'Nothing'
 }
 
-class Company extends Component{
-    render(){
+const Company=()=>{
+        const [e,j] = useState('')
+        window.onload = function () { // 공장 정보 반환
+            axios({
+                method: 'get',
+                url: 'http://easyair.herokuapp.com/clients',
+                headers: {
+                    "Authorization": "Bearer " + window.localStorage.getItem("token"),
+                },
+                data: {
+
+                }
+            }).then((res) => {
+                console.log('공장 정보 반환')
+                console.log(res)
+                j(res.data)
+                console.log('sdf')
+                console.log(e)
+            })
+        }
+        const menus = e; // 배열 받아와야 하는데 우째하냐
         return(
             <C.Body>
                 <div className="CompanyIntro">
-                    <h2>My Company</h2>
-                    <a style={{color:'gray'}}>- 사용자님께서 포함된 회사의 정보가 표시됩니다 - </a>     <br/><br/>
+                    <h2>Factory Chart</h2>
+                    <a style={{color:'gray'}}>- 팀의 직원들이 포함된 공장의 정보가 표시됩니다 - </a>     <br/><br/>
                     <a>( Information about the company that contains you will be displayed  )</a>
                 </div>
                 <div className="ManagementContainer">
@@ -57,7 +77,6 @@ class Company extends Component{
                 </C.Footer>
             </C.Body>
         );
-    }
 }
 
 export default Company;
