@@ -7,6 +7,13 @@ const addBody = styled.div`
     justify-content: center;
     align-items: center;   
     flex-direction:column;
+    form{
+        h6{
+            position:absolute;
+            margin-top:10px;
+            color:red;
+        }
+    }
     div:first-child{
         font-family:Arial, Helvetica, sans-serif;
         width:580px;
