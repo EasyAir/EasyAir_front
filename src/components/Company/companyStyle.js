@@ -50,6 +50,22 @@ div:nth-of-type(4){
         height:30px;
         outline:none;
         color:#50C9BB;
+        transition:0.5s;
+        cursor: pointer;
+        margin-left:10px;
+        border-radius:8px;
+        :hover{
+            background-color:#50C9BB;
+            color:white;
+        }
+        :first-child{
+            border:1px solid red;
+            color:red;
+            :hover{
+                color:white;
+                background-color:red;
+            }
+        }
     }
 }
 div:first-child{
@@ -77,8 +93,10 @@ justify-content:flex-end;
     color:#50C9BB;
     border-radius:5px;
     outline:none;
+    transition:1s;
     :hover{
-        box-shadow: 0px 0px 5px #50C9BB;
+        background-color: #50C9BB;
+        color:white;
     }
 }
 

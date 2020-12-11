@@ -24,6 +24,7 @@ const Company=()=>{
             console.log('공장 정보 반환')
             console.log(res)
             console.log(res.data.clients)
+            window.localStorage.setItem("factoryLength",res.data.clients.length)
             arr(res.data.clients) // 스테이트에 객체 저장
         })
     },[])
@@ -31,7 +32,7 @@ const Company=()=>{
      function a(){
         console.log(menu)   
      }
-    const menulist = menu[0].map((e)=>(<CompanyManagement companyName={e.name} phoneNum={e.repr_phone} content={e.profile} represent={e.repr_name}></CompanyManagement>))  
+    const menulist = menu[0].map((e)=>(<CompanyManagement companyName={e.name} phoneNum={e.repr_phone} content={e.profile} represent={e.repr_name} id={e.id}></CompanyManagement>))  
         return(
             <C.Body>
                 <div className="CompanyIntro">
