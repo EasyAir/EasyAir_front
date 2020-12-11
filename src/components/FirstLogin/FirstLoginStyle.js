@@ -37,6 +37,20 @@ h3{
         color:#50C9BB;
     }
 }
+button{
+    margin-top:20px;
+    padding:5px 20px;
+    background-color:white;
+    border:2px solid white;
+    color:#50C9BB;
+    border-radius:5px;
+    font-weight:bold;
+    cursor: pointer;
+    outline:none;
+    :hover{
+        box-shadow:0px 0px 3px gray;
+    }
+}
 `
 
 export{

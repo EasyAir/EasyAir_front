@@ -4,7 +4,9 @@
     animation-iteration-count: infinite;
 }
 
-
+d{
+    background-color: rgb(184, 184, 184);
+}
 @keyframes blink{
     from{
         border-right: 2px solid black;
